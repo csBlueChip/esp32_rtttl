@@ -52,6 +52,8 @@ Format
 		Simpsons : d=4,o=5,b=160 : 32p,c.6,e6,f#6,8a6,g.6,e6,c6,8a,8f#,8f#,8f#,2g
 ```
 
+# Wiring
+
 The default code uses the onboard LED to flash when notes are played.
 
 The only thing you need to do is add a Piezo Buzzer:
@@ -59,3 +61,7 @@ The only thing you need to do is add a Piezo Buzzer:
 `ESP32/GPIO:2 --[red]--> 220ohm resistor ----> Piezo Buzzer --[black]--> Gnd`
 
 ...I'm not convinced the resistor is necessary, but probably safer that way.
+
+# Notes
+
+I'm new to the ESP IDF, so I don't really know what most of the files are that I inherited from using the 'blink' example as a starting point ...All the real work is in `main/rtttl.c`
