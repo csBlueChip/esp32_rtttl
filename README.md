@@ -1,16 +1,16 @@
 # Play RTTTL (Nokia Ringtones)
 
-Plays an RTTTL string via a piezo speaker using PWM
+Plays an RTTTL string via a piezo speaker using PWM.
 
-LED will blink on/off with each note
+LED will blink on/off with each note.
 
 1. Set target : `idf.py  set-target esp32s2`
 2. Choose GPIO pins: `idf.py menuconfig` ...see RTTTL Configuration
 3. Build demo : `idf.py build`
 4. Flash to ESP32 : `idf.py  -p /dev/ttyUSB0  -b 115200  flash`
 
-Here are (10,825 example RTTTL tunes)[https://picaxe.com/rtttl-ringtones-for-tune-command/]
-also (available on archive.org)[https://web.archive.org/web/20210414044550/https://picaxe.com/rtttl-ringtones-for-tune-command/]
+Here are [10,825 example RTTTL tunes](https://picaxe.com/rtttl-ringtones-for-tune-command/)
+also [available on archive.org](https://web.archive.org/web/20210414044550/https://picaxe.com/rtttl-ringtones-for-tune-command/)
 
 # RTTTL Format Specification
 
@@ -52,6 +52,10 @@ Format
 		Simpsons : d=4,o=5,b=160 : 32p,c.6,e6,f#6,8a6,g.6,e6,c6,8a,8f#,8f#,8f#,2g
 ```
 
-The default code uses the onboard LED to flash when notes are played
-The only thing you need to do is add a Piezo Buzzer
+The default code uses the onboard LED to flash when notes are played.
+
+The only thing you need to do is add a Piezo Buzzer:
+
 `ESP32/GPIO:2 --[red]--> 220ohm resistor ----> Piezo Buzzer --[black]--> Gnd`
+
+...I'm not convinced the resistor is necessary, but probably safer that way.
