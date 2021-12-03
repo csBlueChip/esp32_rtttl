@@ -1,0 +1,21 @@
+menu "RTTTL Configuration"
+
+    config PWM_PIN
+        int "Piezo Speaker GPIO number"
+        range 0 34
+        default 3
+        help
+            GPIO number (IOxx) to blink on and off.
+
+            Read the datasheet for details of what pins are valid
+
+    config LED_PIN
+        int "Blinking LED GPIO number"
+        range 0 34
+        default 2
+        help
+            GPIO number (IOxx) to blink on and off.
+
+            Read the datasheet for details of what pins are valid
+
+endmenu
